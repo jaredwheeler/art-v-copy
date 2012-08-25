@@ -1,0 +1,46 @@
+#ui
+{
+	position: absolute;
+	left:0px;
+	top:0px;
+	z-index: 100;
+}
+#pokeBtn
+{
+	background: url('../img/cta.png');
+	background-repeat:no-repeat;
+	position: relative;
+	left: 450px;
+	top: 400px;
+	padding: 100px;
+}
+
+#preload
+{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:1024px;
+	z-index: 102;
+}
+
+#casey
+{
+	background: url('../img/casey.png');
+	background-repeat:no-repeat;
+	position: absolute;
+	left: 600px;
+	top: 160px;
+	padding: 150px;
+	width:200px;
+}
+#ricky
+{
+	background: url('../img/ricky.png');
+	background-repeat:no-repeat;
+	position: absolute;
+	left: 50px;
+	top: 160px;
+	padding: 150px;
+	width:200px;
+}
