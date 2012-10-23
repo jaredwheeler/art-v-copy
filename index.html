@@ -29,10 +29,6 @@
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
   <script src="js/libs/modernizr-2.5.3.min.js"></script>
-  <!-- Chang URLs to wherever Video.js files will be hosted -->
-  <link href="css/video-js.css" rel="stylesheet" type="text/css">
-  <!-- video.js must be in the <head> for older IEs to work. -->
-  <script src="js/video.js"></script>
 
   
 	
@@ -45,11 +41,8 @@
 
   </header>
   <div role="main">
-	<video id="main_video" class="video-js vjs-default-skin" width="1024" height="576"
-	      poster="img/poster.jpg"
-	      data-setup='{ "controls": false "autoplay": false "preload": auto }'>
+	<video id="main_video" width="1024" height="576" preload="none" autoplay="false">
 	    <source src="http://www.happyfight.com/cnr/cnr.mp4" type='video/mp4' />
-	    <track kind="captions" src="captions.vtt" srclang="en" label="English" />
 	  </video>
 	<div id="ui">
 	  <div id="pokeBtn" class="btn"></div>
@@ -65,29 +58,31 @@
 
 
   <!-- JavaScript at the bottom for fast page loading -->
-<script src="js/uiMan.js"></script>
-<script src="js/vidMan.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vidLoadMan.js"></script>
 <script src="js/vidDef.js"></script>
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/libs/jquery-1.7.1.min.js"></script>
+  
 	
 	<script type="text/javascript">
+	/*
 		function impulse()
 		{
 			updateUI( );
 			updateVidMan( );
 		} 
-		
+		*/
 		$(document).ready(function(){
 		   	$("#ui").hide();
-
+			
+			/*
 			changeUIState( "uiInit" );
-
-			setInterval(impulse,100);
+			*/
+			setInterval(loop,100);
 		});
 		
-		$("#pokeBtn").click(handlePoke);
+		$("#pokeBtn").click(handleCTAClick);
 	 </script>
   <!-- scripts concatenated and minified via build script -->
   <script src="js/plugins.js"></script>
